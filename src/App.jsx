@@ -6,7 +6,7 @@ export const App = () => {
   return (
     <>
       <NavBar />
-      <ItemListContainer greeting={"Bienvenidos a la mejor librería de alguna galaxia!"} />
+      <ItemListContainer greeting={"Bienvenidos a Librería Arcoíris, la mejor librería de alguna galaxia!"} />
     </>
 
   )
