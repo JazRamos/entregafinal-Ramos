@@ -1,13 +1,18 @@
-import { ItemListContainer } from "./Components/ItemListContainer/ItemListContainer"
-import { NavBar } from "./Components/NavBar/NavBar"
-
+import { ItemListContainer } from "./Components/ItemListContainer/ItemListContainer";
+import { ItemDetailContainer } from "./Components/ItemDetailContainer/ItemDetailContainer";
+import { NavBar } from './Components/NavBar/NavBar';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 export const App = () => {
   return (
-    <>
+    <BrowserRouter>
       <NavBar />
-      <ItemListContainer greeting={"Bienvenidos a Librería Arcoíris, la mejor librería de alguna galaxia!"} />
-    </>
+      <Routes>
+        <Route path="/" element={<ItemListContainer greeting={"Bienvenidos a la mejor librería de alguna galaxia: Librería Arcoíris!"} />} />
+        <Route path="/category/:category" element={<ItemListContainer greeting={"Librería Arcoíris"} />} />
+        <Route path="/item/:id" element={<ItemDetailContainer />} />
+      </Routes>
+    </BrowserRouter>
 
   )
 }
