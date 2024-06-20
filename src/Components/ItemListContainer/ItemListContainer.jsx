@@ -26,7 +26,12 @@ export const ItemListContainer = ({ greeting }) => {
     return (
         <>
             <div> {greeting} </div>
-            {isLoading ? <h4>Cargando productos, gracias por la paciencia :) </h4> : <ItemList products={products} />}
+            {isLoading ? <div className="fs-3 text-center p-3"> Cargando productos, gracias por la paciencia :)
+                <div className="d-flex justify-content-center">
+                    <div className="spinner-border" role="status">
+                    </div>
+                </div> </div> : <ItemList products={products} />}
+
         </>
     );
 };
